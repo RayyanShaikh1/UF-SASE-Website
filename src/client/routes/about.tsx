@@ -5,18 +5,9 @@ import HistorySection from "@about/HistorySection";
 import MissionSection from "@about/MissionSection";
 import Timeline from "@about/Timeline";
 import YoutubeSection from "@about/YoutubeSection";
-import { imageUrls } from "@assets/imageUrls";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/about")({
-  meta: () => [
-    ...seo({
-      title: "About | UF SASE",
-      description: "UF Society of Asian Scientists & Engineers",
-      image: imageUrls["SASELogo.png"],
-    }),
-  ],
   component: () => {
     return (
       <div className="mt-5 flex min-h-screen flex-col items-center justify-center bg-white font-redhat">

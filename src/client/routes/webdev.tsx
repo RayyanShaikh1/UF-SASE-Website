@@ -6,17 +6,8 @@ import InfoCard from "@components/programs/InfoCard";
 import { createFileRoute } from "@tanstack/react-router";
 import fullstackTeamLead from "../assets/fullstackTeamLead.jpeg";
 import { imageUrls } from "../assets/imageUrls";
-import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/webdev")({
-  meta: () => [
-    ...seo({
-      title: "WEBDEV | UF SASE",
-      description: "UF Society of Asian Scientists & Engineers",
-      image: imageUrls["SASELogo.png"],
-    }),
-  ],
-
   component: () => {
     return (
       <div className="mt-12 flex min-h-screen flex-col items-center bg-white font-[Poppins]">
