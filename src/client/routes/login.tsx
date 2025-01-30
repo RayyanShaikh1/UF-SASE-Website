@@ -3,10 +3,20 @@ import AuthForm from "@components/AuthForm";
 import { Page } from "@components/Page";
 import { useMutation } from "@tanstack/react-query";
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
+import { imageUrls } from "../assets/imageUrls";
 import { useAuth } from "../AuthContext";
 import ShadowCard from "../components/AuthShadowCard";
+import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/login")({
+  meta: () => [
+    ...seo({
+      title: "Login | UF SASE",
+      description: "UF Society of Asian Scientists & Engineers",
+      image: imageUrls["SASELogo.png"],
+    }),
+  ],
+
   component: () => {
     const { login } = useAuth();
     const navigate = useNavigate();

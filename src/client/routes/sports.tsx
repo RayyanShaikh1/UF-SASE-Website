@@ -6,8 +6,17 @@ import { createFileRoute } from "@tanstack/react-router";
 import { imageUrls } from "../assets/imageUrls";
 import SportsTestimony from "../assets/SportsTestimony.jpeg";
 import { faqData } from "../components/programs/faqSports";
+import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/sports")({
+  meta: () => [
+    ...seo({
+      title: "Sports | UF SASE",
+      description: "UF Society of Asian Scientists & Engineers",
+      image: imageUrls["SASELogo.png"],
+    }),
+  ],
+
   component: () => {
     return (
       <div className="mt-12 flex min-h-screen flex-col items-center bg-white font-[Poppins]">

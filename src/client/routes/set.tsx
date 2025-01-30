@@ -5,8 +5,16 @@ import TestimonialCard from "@components/programs/TestimonialCard";
 import { createFileRoute } from "@tanstack/react-router";
 import { imageUrls } from "../assets/imageUrls";
 import { faqData } from "../components/programs/faqSet";
+import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/set")({
+  meta: () => [
+    ...seo({
+      title: "SET | UF SASE",
+      description: "UF Society of Asian Scientists & Engineers",
+      image: imageUrls["SASELogo.png"],
+    }),
+  ],
   component: () => {
     return (
       <div className="mt-12 flex min-h-screen flex-col items-center bg-white font-[Poppins]">

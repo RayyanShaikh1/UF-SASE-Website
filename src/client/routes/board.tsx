@@ -2,8 +2,16 @@ import { imageUrls } from "@assets/imageUrls";
 import boardInfo from "@components/BoardInfo";
 import BoardMemberCard from "@components/BoardMemberCard";
 import { createFileRoute } from "@tanstack/react-router";
+import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/board")({
+  meta: () => [
+    ...seo({
+      title: "Board | UF SASE",
+      description: "UF Society of Asian Scientists & Engineers",
+      image: imageUrls["SASELogo.png"],
+    }),
+  ],
   component: () => {
     return (
       <div className="min-h-screen px-4 py-8 font-[Poppins] md:px-16">
