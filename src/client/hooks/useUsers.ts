@@ -2,7 +2,7 @@ import type { InsertUser, UpdateUser } from "@schema/userSchema";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { createUser, deleteUser, fetchUser, fetchUsers, updateUser } from "../api/users";
 
-export const useUsers = () => {
+export const useUsers = (_userId?: string) => {
   const queryClient = useQueryClient();
 
   const userQuery = useQuery({
