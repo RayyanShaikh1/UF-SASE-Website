@@ -46,7 +46,8 @@
       "@db/index": ["./src/server/db"],
       "@db/*": ["./src/server/db/*"],
       "@shared/*": ["./src/shared/*"],
-      "@schema/*": ["./src/shared/schema/*"]
+      "@schema/*": ["./src/shared/schema/*"],
+      "@tanstack/start/config": ["node_modules/@tanstack/start/dist/esm/config"]
     }
   }
 }

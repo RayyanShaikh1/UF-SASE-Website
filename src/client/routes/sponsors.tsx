@@ -2,16 +2,8 @@ import SponsorInfo from "@/client/components/sponsors/SponsorInfo";
 import { imageUrls } from "@assets/imageUrls";
 import SponsorCard from "@components/sponsors/SponsorCard";
 import { createFileRoute } from "@tanstack/react-router";
-import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/sponsors")({
-  meta: () => [
-    ...seo({
-      title: "Sponsors | UF SASE",
-      description: "UF Society of Asian Scientists & Engineers",
-      image: imageUrls["SASELogo.png"],
-    }),
-  ],
   component: () => {
     return (
       <div className="flex flex-col items-center">

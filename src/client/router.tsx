@@ -1,6 +1,6 @@
 import { dehydrate, hydrate, QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createRouter as createTanStackRouter } from "@tanstack/react-router";
-import { SuperJSON } from "superjson";
+// import { SuperJSON } from "superjson";
 import { AuthProvider } from "./auth";
 import { DefaultCatchBoundary } from "./components/DefaultCatchBoundary";
 import { NotFound } from "./components/NotFound";
@@ -18,7 +18,8 @@ export function createRouter() {
     defaultPreload: "intent",
     defaultErrorComponent: DefaultCatchBoundary,
     defaultNotFoundComponent: () => <NotFound />,
-    transformer: SuperJSON,
+    // transformer: SuperJSON,
+
     // Optionally provide your loaderClient to the router context for
     // convenience (you can provide anything you want to the router
     // context!)

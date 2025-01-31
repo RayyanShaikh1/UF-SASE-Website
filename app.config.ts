@@ -1,3 +1,5 @@
+/// <reference types="vinxi/types/client" />
+/// <reference types="vinxi/types/server" />
 import { defineConfig } from "@tanstack/start/config";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
 import tsConfigPaths from "vite-tsconfig-paths";

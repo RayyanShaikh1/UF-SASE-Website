@@ -79,3 +79,4 @@ dist
 # direnv
 .direnv/
 .env*.local
+bun.lockb

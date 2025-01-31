@@ -1,4 +1,3 @@
-import { imageUrls } from "@assets/imageUrls";
 import type { FormData } from "@components/AuthForm";
 import { Page } from "@components/Page";
 import { useMutation } from "@tanstack/react-query";
@@ -8,17 +7,8 @@ import { useAuth } from "../AuthContext";
 import AuthForm from "../components/AuthForm";
 import ShadowCard from "../components/AuthShadowCard";
 import { SuccessModal } from "../components/SuccessModal";
-import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/signup")({
-  meta: () => [
-    ...seo({
-      title: "Signup | UF SASE",
-      description: "UF Society of Asian Scientists & Engineers",
-      image: imageUrls["SASELogo.png"],
-    }),
-  ],
-
   component: () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
     const { login } = useAuth();

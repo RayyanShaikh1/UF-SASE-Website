@@ -1,7 +1,7 @@
 import { errorResponseSchema } from "@schema/responseSchema";
 import { clsx, type ClassValue } from "clsx";
 import type { Context } from "hono";
-import type { StatusCode } from "hono/utils/http-status";
+import type { ContentfulStatusCode, StatusCode } from "hono/utils/http-status";
 import { twMerge } from "tailwind-merge";
 import type { z, ZodTypeAny } from "zod";
 
@@ -28,7 +28,7 @@ export const formatAndValidateResponse = <T>(result: T, message: string, schema:
 };
 
 export const createErrorResponse = (c: Context, errCode: string, errMsg: string, statusCode: StatusCode = 500) =>
-  c.json({ error: { errCode, errMsg } }, statusCode);
+  c.json({ error: { errCode, errMsg } }, statusCode as ContentfulStatusCode);
 
 export const apiFetch = async <T>(url: string, options: RequestInit = {}, successSchema: ZodTypeAny): Promise<T> => {
   const response = await fetch(url, options);

@@ -1,21 +1,13 @@
+import InternTestimonial from "@assets/interns/InternTestimonial.png";
+import InternsPic from "@assets/interns/SaseInterns.png";
 import FAQ from "@components/programs/FAQCard";
 import GoalCard from "@components/programs/GoalCard";
 import InfoCard from "@components/programs/InfoCard";
 import TestimonialCard from "@components/programs/TestimonialCard";
 import { createFileRoute } from "@tanstack/react-router";
-import { imageUrls } from "../assets/imageUrls";
 import { faqData } from "../components/programs/faqInterns";
-import { seo } from "../utils/seo";
 
 export const Route = createFileRoute("/interns")({
-  meta: () => [
-    ...seo({
-      title: "Interns | UF SASE",
-      description: "UF Society of Asian Scientists & Engineers",
-      image: imageUrls["SASELogo.png"],
-    }),
-  ],
-
   component: () => {
     return (
       <div className="mt-12 flex min-h-screen flex-col items-center bg-white font-[Poppins]">
@@ -45,7 +37,7 @@ export const Route = createFileRoute("/interns")({
         <div className="w-full max-w-7xl px-4 py-8">
           <div className="mx-auto mb-24 w-full max-w-7xl px-4">
             <img
-              src={imageUrls["SaseInterns.png"]}
+              src={InternsPic}
               alt="Placeholder"
               className="w-full rounded-3xl border-4 border-saseGreen"
               style={{ height: "600px", objectFit: "cover" }}
@@ -56,7 +48,7 @@ export const Route = createFileRoute("/interns")({
             <h2 className="text-4xl text-gray-800">Testimonials</h2>
           </header>
           <TestimonialCard
-            image={imageUrls["InternTestimonial.png"]}
+            image={InternTestimonial}
             text="I really enjoyed my time with SASE Interns as it was a great mixture of  fun and general skill building. I got to connect with other SASE members, get more involved with SASE, and improve a variety of skills. But there was also tons of times where I got to joke around making Interns never feel like a burden."
             name="Bryant Cao"
             title="2024 Intern"
